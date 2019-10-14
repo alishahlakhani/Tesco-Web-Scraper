@@ -1,0 +1,34 @@
+{
+  "name": "tesco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
+    "watch-node": "nodemon dist/index.js",
+    "watch-ts": "tsc -w",
+    "debug": "nodemon debug dist/index.js",
+    "build": "npm run build-ts",
+    "build-ts": "tsc"
+  },
+  "author": "Ali Shah Lakhani",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "concurrently": "^3.5.1",
+    "console.table": "^0.10.0",
+    "crawler": "^1.2.1",
+    "lodash": "^4.17.11",
+    "nodemailer": "^4.6.8",
+    "set-value": "^3.0.0",
+    "shortid": "^2.2.13",
+    "signale": "^1.3.0",
+    "statware": "^1.1.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.116",
+    "@types/node": "^10.0.9",
+    "@types/signale": "^1.2.0",
+    "nodemon": "^1.12.1",
+    "typescript": "^2.6.2"
+  }
+}
